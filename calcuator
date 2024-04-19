@@ -1,0 +1,44 @@
+import math
+def calculator():
+ operator=input('''enter any of the below operation
+               1.addition
+               2.subtration
+               3.multiplication
+               4.division
+               5.square root
+               6.cube  ''').lower()
+ if(operator=='addition'):
+     a=int(input("enter your first number"))
+     b = int(input("enter your second number"))
+     print(f"the addition of given numbers is {a+b}")
+ elif(operator == 'subtraction'):
+     a = int(input("enter your first number"))
+     b = int(input("enter your second number"))
+     print(f"the subtraction of given numbers is {a-b}")
+ elif (operator == 'multiplication'):
+     a = int(input("enter your first number"))
+     b = int(input("enter your second number"))
+     print(f"the multiplication of given numbers is {a*b}")
+ elif (operator == 'division'):
+     a = int(input("enter your first number"))
+     b = int(input("enter your second number"))
+     print(f"the division of given numbers is {a/b}")
+ elif (operator == 'square root'):
+     a = int(input("enter your  number"))
+     print(f"the square root of given numbers is {math.sqrt(a)}")
+ elif (operator == 'cube'):
+     a = int(input("enter your number"))
+     print(f"the cube of given numbers is {a*a*a}")
+ else:
+     print('Invalid input')
+
+def main():
+       calculator()
+       while True:
+           c= input("Do you want to calculate again? (yes/no): ").lower()
+           if c=='yes':
+               calculator()
+           else:
+               print("thank you")
+               break
+main()
